@@ -1,6 +1,6 @@
 from torch import nn
 
-from models.layers.layer_normalization import LayerNormal
+from models.layers.layer_normalization import LayerNorm
 from models.layers.multi_head_attention import MultiHeadAttention
 from models.layers.position_wise_feed_forward import PositionwiseFeedForward
 
@@ -18,12 +18,12 @@ class EncoderLayer(nn.Module):
         """
         super(EncoderLayer, self).__init__()
         self.attention = MultiHeadAttention(d_model=d_model, n_head=n_head)
-        self.norm1 = LayerNormal(d_model=d_model)
+        self.norm1 = LayerNorm(d_model=d_model)
         self.dropout1 = nn.Dropout(p=drop_prob)
 
         self.ffn = PositionwiseFeedForward(
             d_model=d_model, hidden=ffn_hidden, drop_prob=drop_prob)
-        self.norm2 = LayerNormal(d_model=d_model)
+        self.norm2 = LayerNorm(d_model=d_model)
         self.dropout2 = nn.Dropout(p=drop_prob)
 
     def forward(self, x, s_mask):

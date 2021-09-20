@@ -12,7 +12,7 @@ loader = DataLoader(ext=('.en', '.de'),
 
 train, valid, test = loader.make_dataset()
 loader.build_vocab(train_data=train, min_freq=2)
-train_iterator, valid_iterator, test_iterator = loader.make_iter((train, valid, test),
+train_iterator, valid_iterator, test_iterator = loader.make_iter(train, valid, test,
                                                                   batch_size=batch_size,
                                                                   device=device)
 

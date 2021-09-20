@@ -21,7 +21,7 @@ class Decoder(nn.Module):
         self.linear = nn.Linear(d_model, dec_voc_size)
 
     def forward(self, trg, enc_src, trg_mask, src_mask):
-        trg = self.emd(trg)
+        trg = self.emb(trg)
 
         for layer in self.layers:
             trg = layer(trg, enc_src, trg_mask, src_mask)
