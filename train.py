@@ -121,7 +121,7 @@ def run(total_epoch, best_loss):
         
         train_losses.append(train_loss)
         test_losses.append(valid_loss)
-        blue.append(blue)
+        blues.append(blue)
         epoch_mins, epoch_secs = epoch_time(start_time, end_time)
 
         if valid_loss < best_loss:
@@ -129,11 +129,11 @@ def run(total_epoch, best_loss):
             torch.save(model.state_dict(), 'saved/model-{0}.pt'.format(valid_loss))
 
         f = open('results/train_loss.txt', 'w')
-        f.write(str(train_loss))
+        f.write(str(train_losses))
         f.close()
 
         f = open('results/blue.txt', 'w')
-        f.write(str(blue))
+        f.write(str(blues))
         f.close()
 
         f = open('results/test_loss.txt', 'w')
@@ -141,8 +141,8 @@ def run(total_epoch, best_loss):
         f.close()
 
         print(f"Epoch: {step+1} | Time: {epoch_mins}m {epoch_secs}s")
-        print(f"\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f)}")
-        print(f"\tVal Loss: {valid_loss:.3f} | Val PPL: {math.exp(valid_loss):7.3f)}")
+        print(f"\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}")
+        print(f"\tVal Loss: {valid_loss:.3f} | Val PPL: {math.exp(valid_loss):7.3f}")
         print(f"\tBLUE Score: {blue:.3f}")
 
 
