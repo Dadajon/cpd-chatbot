@@ -1,7 +1,7 @@
 import torch
 
 # choose GPU
-device = torch.device("cuda:5" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
 # model parameters
 batch_size = 128
@@ -18,7 +18,7 @@ factor = 0.9
 adam_eps = 5e-9
 patience = 10
 warmup = 100
-epoch = 1
+epoch = 1000
 clip = 1.0
 weight_decay = 5e-4
 inf = float('inf')
