@@ -18,9 +18,7 @@ def draw(mode):
         plt.plot(train, 'r', label='train')
         plt.plot(test, 'g', label='validation')
         plt.legend(loc='lower left')
-
-
-    elif mode == 'bleu':
+    elif mode == 'blue':
         bleu = read('results/blue.txt')
         plt.plot(bleu, 'b', label='blue score')
         plt.legend(loc='lower right')
@@ -34,7 +32,7 @@ def draw(mode):
 
 def main():
     draw(mode='loss')
-    draw(mode='bleu')
+    draw(mode='blue')
 
 
 if __name__ == '__main__':
