@@ -9,7 +9,7 @@ Learn Transformer model ([Attention is all you need, Google Brain, 2017](https:/
 
 ## Results
 
-<img src="results/graph.png" width="80%"/>
+<img src="results/graph.png" width="60%"/>
 
 - Min train loss = 2.7348
 - Min validation loss = 3.2860
