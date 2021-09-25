@@ -1,7 +1,7 @@
 <img src="https://cdn.svgporn.com/logos/pytorch.svg" align="right" width="15%"/>
 
 # Transformer
-Learn Transforemer model ([Attention is all you need, Google Brain, 2017](https://arxiv.org/abs/1706.03762)) from implementation code written by [@hyunwoongko](https://github.com/hyunwoongko/transformer) in 2021.
+Learn Transformer model ([Attention is all you need, Google Brain, 2017](https://arxiv.org/abs/1706.03762)) from implementation code written by [@hyunwoongko](https://github.com/hyunwoongko/transformer) in 2021.
 
 [![Python](https://img.shields.io/badge/Python-3.8.11-blue?logo=python)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9.0-red?logo=pytorch)](https://pytorch.org/)
