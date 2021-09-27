@@ -29,3 +29,9 @@ Learn Transformer model ([Attention is all you need, Google Brain, 2017](https:/
 - [How Transformers work in deep learning and NLP: an intuitive introduction ](https://theaisummer.com/transformer/)
 - [Why multi-head self attention works: math, intuitions and 10+1 hidden insights](https://theaisummer.com/self-attention/)
 
+## GPT 
+OpenAI GPT model using :hugs:HuggingFace
+
+
+## BERT
+BERT example from the Hugging Face transformer library
